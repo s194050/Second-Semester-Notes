@@ -128,16 +128,26 @@
                 "file": "Foundation of Dis. Sys/Week 4 - P2P.md"
               }
             }
+          },
+          {
+            "id": "1ce0980c24a121b0",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -146,6 +156,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c604fc1f5eb170f7",
+  "active": "c6938b67e6c01c27",
   "lastOpenFiles": []
 }
