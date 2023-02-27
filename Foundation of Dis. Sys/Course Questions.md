@@ -198,71 +198,199 @@
 	1. A P2P system is a distributed collection of peer nodes that act both as servers and clients.
 
 2. What are the main differences between Client-Server and P2P systems?  
+	1. Clients only talk to servers, and the servers are well connected to the "core" of the internet
+	2. Clients talk to other clients. Only nodes located at the "periphery of the internet"
 
-(3) What are the characteristics of P2P systems?  
+3. What are the characteristics of P2P systems?  
+	1. Symmetric
+	2. Local Knowledge
+	3. Decentralisation
+	4. Robustness
+	5. High Scalability
+	6. Low-cost
 
-(4) What is an overlay network?  
+4. What is an overlay network?  
+	1. An overlay network is a computer network that is built on top of another network. It can be used to provide additional functionality, such as increased security, fault tolerance and scalability. An overlay network can also be used to create virtual private networks (VPNs) for remote access.
 
-(5) What are advantages of overlay networks?  
+5. What are advantages of overlay networks?  
+	1. Gives large design flexibility, but comes at the cost of maintenance
 
-(6) Can you name some problems of P2P systems?  
+6. Can you name some problems of P2P systems?  
+	1. Overlay construction and maintenance
+	2. Data location
+	3. Data dissemination
+	4. Per-node state
+	5. Tolerance to churn
+		1. What is churn in distributed systems?
+			1. Churn in distributed systems is the rate at which nodes are joining and leaving the network. It is an important metric that helps to measure the health of a distributed system. Churn can be caused by a variety of factors, including hardware or software failures, environmental conditions, or user actions. Monitoring churn can help detect problems in a distributed system and help identify potential solutions to improve its stability and performance.
 
-(7) What are the characteristics of centralized overlays?  
+7. What are the characteristics of centralized overlays?  
+	1.  Systems all in one Placement
+	* Information is centralised
+	* Not extensible
+	* Single point of failure
+	* Easy to shut down
 
-(8) What are the characteristics of hierarchical overlays?  
+8. What are the characteristics of hierarchical overlays?  
+	1.  Chain of authority
+	* Cache consistency
+	* Add more leaves, rebalance
+	* Root is vulnerable
+	* Just shut down the root
 
-(9) What are the characteristics of decentralized overlays?  
+9.  What are the characteristics of decentralized overlays?  
+	1.  Difficult, many owners
+	* Difficult, unreliable peers
+	* Anyone can join
+	* Redundancy
+	* Difficult to shut down
 
-(10) What is the difference between centralized and decentralized overlays?  
+10. What is the difference between centralized and decentralized overlays? 
+	1. Centralized overlays are centralized systems that provide a single point of contact for all users and use one or more central servers to manage user interactions. This type of overlay is useful for applications that require a single point of control, but can be vulnerable to single points of failure. 
+	2. Decentralized overlays are distributed systems that provide multiple points of contact for users, allowing them to interact with each other without relying on a single server. This type of overlay is useful for applications that require multiple independent nodes and can offer increased scalability and robustness.
 
-(11) What is the difference between searching and addressing networks?  
+11.  What is the difference between searching and addressing networks?  
+	1. Addressing network
+	* Find by addressing them with their unique name etc. URLs
+	2. Searching networks
+	* Find objects by searching with keywords that match the objects description etc. Google
 
-(12) What is the difference between structured and unstructured P2P overlay networks?  
+12. What is the difference between structured and unstructured P2P overlay networks?  
+	* Unstructured
+		* Based on searching
+	* Structured
+		* Based on addressing
 
-(13) What is the lookup problem in P2P systems?  
+13. What is the lookup problem in P2P systems?  
+	1. Node A wants to store a data item D.
+	2. Node B wants to retrieve D without prior knowledge of D's current location
+	3. How should the distributed system, especially data placement and retrieval, be organized (in particular, with regard to scalability and efficiency)?
 
-(14) What are the strategies for data retrieval in distributed systems?  
+14. What are the strategies for data retrieval in distributed systems?  
+	1. Central servers
+	2. Flooding
+	3. Distributed indexing (Distributed Hash Tables)
+	4. Superpeers
+	5. Loosely structure overlays.
 
-(15) What are the advantages and disadvantages of data retrieval approaches in P2P systems with a central server?  
+15. What are the advantages and disadvantages of data retrieval approaches in P2P systems with a central server?  
+	1. Advantages:
+		* Search complexity of O(1)
+		* Fuzzy and complex queries Possible
+	* Disadvantages
+		* The central server is a critical element in regards to scalability and availability
+		* Single point of failure
+		* Memory consumption is O(N)
 
-(16) What is flooding search in P2P systems?  
+16. What is flooding search in P2P systems?  
+	1. In a peer-to-peer (P2P) network, flooding search is used to find a file or data stored on another computer in the network. It involves sending out copies of a query packet to every node in the network until the desired information is found. The query packet typically includes information about the type of file being sought, as well as optional criteria such as size, name, and other attributes. Every node that receives the query packet then performs a search of its own local storage for matching files. If any are found, it will send back a response packet with details about those files. This process continues until all nodes in the network have received and responded to the query or until no more matches can be found.
+		* Search results are **NOT** guaranteed, flooding stopped by TTL
 
-(17) What are the advantages and disadvantages of flooding search approach for data retrieval in P2P systems?  
+17. What are the advantages and disadvantages of flooding search approach for data retrieval in P2P systems?  
+	1. Pros: Simplicty, no topology constraints, storage cost is O(1)
+	2. Cons: Does not scale well, high network overhead, complexity of looking up and retrieving data is O(N<sup>2</sup>)
 
-(18) What are Distributed Hash Tables (DHT)?  
+18. What are Distributed Hash Tables (DHT)?  
+	1. Distributed Hash Table (DHT) is a type of peer-to-peer (P2P) computing that uses a distributed hash table to store and retrieve data from a set of participating nodes. The network is structured such that each node stores a subset of the data, and can forward requests to other nodes to find the rest. This makes it possible for the network to maintain high availability, even if individual nodes are unreliable or go offline. DHTs are used for distributed storage, distributed caching, and content distribution.
 
-(19) How to design a DHT?  
+19. How to design a DHT? 
+	1. Distribute hash buckets to nodes - Key -> hash bucket -> node
+		1. Step 1: From keys and nodes to IDs (from same ID space)
+		2. Step 2: Partition the ID space (so that each node stores some *k, v* pairs)
+		3. Step 3: Build overlay network
+		4. Step 4: Routing algorithm (route puts/gets through the overlay)
 
-(20) What are the advantages and disadvantages of DHT?  
+20. What are the advantages and disadvantages of DHT?  
+	* Pros:
+		* Completely decentralised
+		* Routing algorithm achieves low hop count O(log n)
+		* Storage cost per nod: O(log n)
+		* If a data item is stored in the system, the DHT guarantees that it is found
+	* Cons: 
+		* Objects are tracked by unreliable nodes
+		* Keywword-based searches
+		* The overlay must be structured according to a given topology
+		* Routing tables must be updated every time a node joins or leaves
 
-(21) What is the role of superpeers in P2P systems?  
+21. What is the role of superpeers in P2P systems?  
+	1. Two-level overlay:  Superpeers are used to track the locations of an object.
+		1. Each node connects to a superpeer and advertises the list of objects it stores
+		2. Search requests are sent to the supernode - which forwards them to to other supernodes.
 
-(22) What are loosely structured overlays?  
+22. What are loosely structured overlays? 
+	1. Loosely structured networks are computer networks that are not based on any formal network structure. Instead, they rely on a decentralized approach to networking, allowing multiple nodes to connect with each other in an ad-hoc fashion. This type of network is often used in peer-to-peer applications and wireless networks. Loosely structured networks do not require a central server or controller and do not necessarily have any predefined roles for nodes or links. Instead, the nodes are free to establish connections in whatever way they choose. This makes them highly resilient and able to quickly adapt to changes in the environment, but also somewhat unpredictable and difficult to manage.
 
-(23) What are the advantages and disadvantages of loosely structured overlays?  
+23. What are the advantages and disadvantages of loosely structured overlays?  
+	1. Advantages
+		1. No topology constraints - flat architecture
+		2. Searches are more efficient than with plain flooding
+	2. Disadvantages
+		1. Does not support keyword-based searches
+		2. Search requests have a TTL
+		3. Does not guarantee a low number of hops, nor that the object in fact will be found
 
-(24) What are the properties of Gnutella protocol?  
+24. What are the properties of Gnutella protocol? 
+	1. Gnutella is a protocol for peer-to-peer search, consisting of:
+			‣ A set of message formats
+			 ✓ 5 basic message types
+			‣ A set of rules governing the exchange of messages
+				✓ Broadcast
+				✓ Back-propagate
+				✓ Handshaking
+			‣ An hostcache for node bootstrap
 
-(25) What are the four most common overlay topologies?  
+25. What are the four most common overlay topologies?  
+	1. Centralised, Hierarchical, Decentralised, Hybrid
 
-(26) What advantages and disadvantages does a flat unstructured network topology  have?  
+26. What advantages and disadvantages does a flat unstructured network topology  have?  
+	1. Advantages: 
+			• Flat unstructured network topology is easy to expand and modify. 
+			• It is cost effective as no additional hardware is required. 
+			• All computers on the network are equal, so everyone can access information quickly. 
+	2. Disadvantages: 
+			• Data transfer speeds are slow because of the lack of structure. 
+			• There is no central control, which can lead to security issues. 
+			• Troubleshooting is difficult as there is no hierarchy or organization to the network.
 
-(27) What advantages and disadvantages does a two-level unstructured network  topology have?  
+27. What advantages and disadvantages does a two-level unstructured network  topology have?  
+	1. Advantages: 
+			• A two-level unstructured network topology is easy to set up and requires minimal maintenance. 
+			• It is also flexible and can easily accommodate new nodes. 
+			• Its decentralized nature makes it resistant to failure. 
+	2. Disadvantages: 
+			• Due to its decentralized nature, the two-level unstructured network topology is less efficient than more structured networks, as it requires more messages to be sent in order to complete tasks. 
+			• It also has a limited scalability, as the number of nodes increases, the network can become overloaded. Additionally, it is more vulnerable to security threats due to its distributed nature.
 
-(28) What advantages and disadvantages does a flat structured network topology have?  
+28. What advantages and disadvantages does a flat structured network topology have?  
+	1. Allows for efficient data location
+	2. These constraints result in a long join and leave procedures
 
-(29) What information do we store in each DHT node?  
 
-(30) How do we perform routing in an overlay network of DHT nodes?  
+29. What information do we store in each DHT node?  
+	1.  a pair (k, v) is stored at the node n such that (examples):
+			 *  its identifier ID(n) is the closest to ID(k);
+			 *  its identifier ID(n) is the largest node id smaller than ID(k)
 
-(31) What methods can we use to account for failures in an overlay network of DHT  
+30.  How do we perform routing in an overlay network of DHT nodes?  
+	1. Recursive routing: initiator starts the process, contacted nodes forward the message
+	2. Iterative routing: initiator personally contact the nodes at each routing step
 
-nodes?  
+31.  What methods can we use to account for failures in an overlay network of DHT nodes?  
+	1. Acknowledge each hop (recursive routing)
+	2. Resend through a different neighbour
 
-(32) Which lookup methods support fuzzy queries?  
+32. Which lookup methods support fuzzy queries?  
+	1. Central server
+	2. Flooding search
 
-(33) How large is the node state and the communication overhead when using a central  server?  
+33. How large is the node state and the communication overhead when using a central  server?  
+	1. Node state: O(N)
+	2. Communication overhead: O(1)
 
-(34) How large is the node state and the communication overhead for a flooding search?
+34. How large is the node state and the communication overhead for a flooding search?
+	1. Node state: O(1)
+	2. Communication overhead: $\geq O(N^2)$  
 
-(35) How large is the node state and the communication overhead when using a DHT?
+35. How large is the node state and the communication overhead when using a DHT?
+	1. Node state: $O(\log(N))$ 
+	2. Communication overhead: $O(\log(N))$ 
