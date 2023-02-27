@@ -39,7 +39,7 @@
 		Q(x $\in$ M) = send x to R
 				     wait for y from R
 				     if y == ACK then Sender
-				     else if Y == NACK then Q(x)
+				     else if y == NACK then Q(x)
 		```
 	* Reciever =
 ```c

@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "4ff7969942d0778f",
+        "id": "61243abb19bf42d6",
         "type": "tabs",
         "children": [
           {
-            "id": "c604fc1f5eb170f7",
+            "id": "d12ba2691d6f5586",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Foundation of Dis. Sys/Week 4 - P2P.md",
+                "file": "Foundation of Dis. Sys/Week 2 - Protocols.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2c32055be7931351",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Foundation of Dis. Sys/Course Questions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Foundation of Dis. Sys/Week 4 - P2P.md",
+                "file": "Foundation of Dis. Sys/Course Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Foundation of Dis. Sys/Week 4 - P2P.md",
+                "file": "Foundation of Dis. Sys/Course Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Foundation of Dis. Sys/Week 4 - P2P.md"
+                "file": "Foundation of Dis. Sys/Course Questions.md"
               }
             }
           },
@@ -156,6 +169,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c6938b67e6c01c27",
-  "lastOpenFiles": []
+  "active": "2c32055be7931351",
+  "lastOpenFiles": [
+    "Foundation of Dis. Sys/Week 2 - Protocols.md",
+    "Foundation of Dis. Sys/Course Questions.md",
+    "Comp Ark/Week 4 - ILP.md",
+    "Comp Ark/Week 2 - Pipeines.md",
+    "Foundation of Dis. Sys/Week 4 - P2P.md",
+    "New Text Document.txt"
+  ]
 }
