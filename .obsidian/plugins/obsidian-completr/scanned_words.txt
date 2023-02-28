@@ -19,6 +19,7 @@ IDs
 ID
 Its
 Iterative
+IP
 System
 Servers
 Self
@@ -61,6 +62,14 @@ Scenarios
 Symmetric
 Step
 Searches
+Schedule
+SoCs
+Systematic
+SoC
+Std
+Store
+Source
+Switching
 is
 in
 internet
@@ -134,6 +143,7 @@ increases
 identifier
 id
 initiator
+interconnect
 distributed
 distinction
 decentralised
@@ -199,6 +209,9 @@ disconnect
 dissemination
 delivers
 detect
+devices
+deterministic
+driven
 collection
 clients
 connected
@@ -322,6 +335,14 @@ consisting
 complete
 closest
 contacted
+chip
+communicating
+car
+congestion
+conserving
+circuit
+commonly
+cut
 of
 only
 other
@@ -463,6 +484,14 @@ puts
 plain
 propagate
 personally
+pipelined
+play
+position
+properly
+payload
+phits
+path
+possibly
 nodes
 no
 networks
@@ -493,6 +522,7 @@ nearby
 notifications
 nor
 nature
+non
 which
 well
 where
@@ -528,6 +558,10 @@ while
 wanted
 who
 wants
+work
+wires
+wire
+wormhole
 they
 to
 the
@@ -591,6 +625,14 @@ types
 transfer
 tasks
 threats
+travelling
+travel
+train
+theoretically
+timing
+terminology
+torus
+tree
 act
 as
 and
@@ -676,6 +718,8 @@ achieve
 achieves
 advertises
 accommodate
+arbitration
+arithmetic
 servers
 symmetric
 server
@@ -796,6 +840,11 @@ speeds
 smaller
 starts
 step
+switches
+service
+switching
+synchronize
+structures
 Clients
 Client
 Coherence
@@ -830,6 +879,9 @@ Combination
 Communication
 Churn
 Centralized
+CMP
+Cores
+Circuit
 Nodes
 Not
 NOT
@@ -844,6 +896,9 @@ NUMBERING
 Negative
 NUMBERED
 Node
+NoCs
+Networking
+NI
 located
 large
 leaves
@@ -887,6 +942,8 @@ limited
 long
 leave
 largest
+locally
+like
 between
 built
 be
@@ -925,6 +982,7 @@ broker
 buckets
 bucket
 bootstrap
+best
 valid
 virtual
 vulnerable
@@ -984,6 +1042,9 @@ factors
 forwards
 formats
 flexible
+flits
+flit
+follow
 Highly
 Hierarchical
 Hybrid
@@ -996,6 +1057,7 @@ Higher
 Happens
 High
 Handshaking
+HW
 Fault
 Fundamental
 Find
@@ -1012,6 +1074,9 @@ FPGA
 Forwarding
 Fraction
 From
+Fat
+Flow
+Flit
 Difficult
 Done
 Decentralised
@@ -1032,6 +1097,8 @@ Duplicate
 Decentralisation
 Decentralized
 Distribute
+Design
+Dimension
 usually
 used
 unreliable
@@ -1070,6 +1137,7 @@ Way
 WAR
 WAW
 Whenever
+Work
 An
 Add
 Anyone
@@ -1099,6 +1167,8 @@ Avoiding
 Advanced
 Allows
 Acknowledge
+Asynchronous
+Adding
 VPNs
 VS
 Variety
@@ -1185,6 +1255,10 @@ route
 rules
 resistant
 recursive
+roads
+relatively
+repeaters
+repeater
 Overlay
 Objects
 Overlays
@@ -1196,6 +1270,7 @@ Optimise
 Optimisations
 Other
 Only
+OCP
 maintenance
 make
 more
@@ -1248,6 +1323,11 @@ matched
 messaging
 metric
 modify
+multi
+methodology
+modularity
+mesochronous
+mean
 establish
 edge
 extensible
@@ -1307,6 +1387,8 @@ environmental
 efficient
 expand
 everyone
+effort
+electronic
 Gives
 Google
 Global
@@ -1315,6 +1397,9 @@ Generallised
 Gene
 Giving
 Groups
+Generally
+GS
+Globally
 Topologies
 Two
 This
@@ -1343,6 +1428,10 @@ Types
 Try
 Tolerance
 Troubleshooting
+Typically
+Technology
+Torus
+Tree
 Evaluating
 Extensibility
 Easy
@@ -1356,6 +1445,7 @@ Exchange
 Example
 Extends
 Event
+Everything
 Manageability
 Memory
 Meeting
@@ -1367,6 +1457,11 @@ Mapped
 Message
 Multicast
 Monitoring
+MPSoC
+Multi
+Motivations
+Mesochronous
+Mesh
 Placement
 Possible
 Pros
@@ -1394,6 +1489,9 @@ Propagation
 Performance
 Publishers
 Partition
+Packets
+Plug
+Packet
 Root
 Redundancy
 Routing
@@ -1414,6 +1512,9 @@ Retry
 Robustness
 Recursive
 Resend
+Reuse
+Routers
+Ring
 Just
 Judged
 Java
@@ -1437,6 +1538,9 @@ By
 Build
 Broadcast
 Back
+BE
+Best
+Bi
 how
 hierarchy
 have
@@ -1471,6 +1575,7 @@ higher
 helps
 health
 hostcache
+header
 URLs
 Unstructured
 Usually
@@ -1493,6 +1598,8 @@ Locality
 Larger
 Local
 Low
+Long
+Links
 queries
 query
 quickly

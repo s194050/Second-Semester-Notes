@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "61243abb19bf42d6",
+        "id": "e72f0f826397438d",
         "type": "tabs",
         "children": [
           {
-            "id": "d12ba2691d6f5586",
+            "id": "c0418b62be2a21b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Foundation of Dis. Sys/Week 4 - P2P.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2c32055be7931351",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Foundation of Dis. Sys/Course Questions.md",
+                "file": "Comp Ark/Week 5 - NoC.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Foundation of Dis. Sys/Course Questions.md",
+                "file": "Comp Ark/Week 5 - NoC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Foundation of Dis. Sys/Course Questions.md",
+                "file": "Comp Ark/Week 5 - NoC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Foundation of Dis. Sys/Course Questions.md"
+                "file": "Comp Ark/Week 5 - NoC.md"
               }
             }
           },
@@ -159,23 +146,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "2c32055be7931351",
+  "active": "c0418b62be2a21b3",
   "lastOpenFiles": [
-    "Foundation of Dis. Sys/Week 4 - P2P.md",
-    "Foundation of Dis. Sys/Course Questions.md",
-    "Foundation of Dis. Sys/Week 2 - Protocols.md",
+    "Comp Ark/Week 5 - NoC.md",
     "Comp Ark/Week 4 - ILP.md",
     "Comp Ark/Week 2 - Pipeines.md",
+    "Foundation of Dis. Sys/Course Questions.md",
+    "Foundation of Dis. Sys/Week 4 - P2P.md",
+    "Foundation of Dis. Sys/Week 2 - Protocols.md",
     "New Text Document.txt"
   ]
 }
