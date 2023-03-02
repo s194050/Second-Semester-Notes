@@ -90,4 +90,10 @@
 	* Assumption: Communication channels follow FIFO discipline for message delivery
 * What is Singhal-Kshemkalyani’s Differential Technique in distributed systems?
 	* Singhal and Kshemkalyani’s Differential Technique is an algorithm used in distributed systems to detect discrepancies between replicas of a distributed system. It uses a combination of message passing, vector clocks, and logical timestamps to detect discrepancies between replicas of the same data. The algorithm works by assigning each replica with a unique vector clock that is updated as the replica receives messages from other replicas. This vector clock allows the replica to determine if it has any out-of-date information compared to other replicas. If any discrepancies are found, the differential technique will then send messages to the other replicas so that they can update their versions with the latest data from the out-of-date replica. This helps to ensure that all replicas have the same up-to-date information about the distributed system.
-* 
+
+* Worst case (m = n): every element of the vector clock has been updated since the last message. As such the next message will need to carry the entire vector **n** 
+* Direct implementation:
+	* Implementation will result in a $O(n²)$ storage overhead at each process
+	* This can be done better
+
+* New implementation uses two additional vectors.
