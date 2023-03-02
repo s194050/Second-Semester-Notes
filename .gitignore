@@ -1,2 +1,9 @@
-scanned_words.txt
-.obsidian/plugins/obsidian-textgenerator-plugin/data.json
+
+# to exclude Obsidian workspace settings (including plugin and hotkey configurations)
+.obsidian/*
+
+# OR only to exclude workspace cache
+.obsidian/workspace/*
+
+# Exclude plugins
+.obsidian/plugins/*
