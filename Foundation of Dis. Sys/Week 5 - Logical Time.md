@@ -97,3 +97,7 @@
 	* This can be done better
 
 * New implementation uses two additional vectors.
+* ![[Pasted image 20230302150223.png]]
+	* LU: Last updated, when was the clock updated.
+	* LS: Last sent, figure out what needs to be sent.
+	* V: Current values.
