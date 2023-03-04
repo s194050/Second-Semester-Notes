@@ -19,6 +19,8 @@
 		* If a neighbour is down, establish a new edge
 	* Gives large design flexibility, but comes at the cost of maintenance
 * P2P Systems needs to allow it to churn
+* What is churn in P2P systems?
+	Churn in P2P systems refers to the continuous change in the membership of peers (nodes) in a peer-to-peer network. It occurs when peers join or leave the network, resulting in a dynamic and unpredictable topology. Churn can affect the performance and reliability of P2P systems, as it can cause instability, increase latency, and reduce data availability. Therefore, P2P systems need to be designed to handle churn efficiently and maintain system functionality despite changes in the network's membership.
 
 ### Topologies
 
