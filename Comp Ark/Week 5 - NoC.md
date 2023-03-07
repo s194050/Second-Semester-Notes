@@ -1,4 +1,4 @@
-* Everything is multi-core and using NoC-based interconnect
+*  Everything is multi-core and using NoC-based interconnect
 	* CMP - Chip multi-processors
 	* MPSoC - Multi-processor Systems-on-chip
 * "Cores" communicating through a packet switches NoC
