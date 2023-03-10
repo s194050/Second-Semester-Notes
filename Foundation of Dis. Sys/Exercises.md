@@ -25,18 +25,37 @@ Firstly the biggest issue, would be the amount of peers disconnecting all the ti
 # Week 5
 ## Exercise 1
 ![[Pasted image 20230304172859.png]]
-
+Check solution pdf.
 ## Exercise 2
 ![[Pasted image 20230304172914.png]]
-
+![[Pasted image 20230310143112.png]]
 ## Exercise 3
 ![[Pasted image 20230304172926.png]]
-
+![[Pasted image 20230310144300.png]]
 ## Exercise 4
 ![[Pasted image 20230304172940.png]]
-
+### 1
+![[Pasted image 20230310144516.png]]
+### 2
+Same reasoning as above proof
+### 3
+See solution pdf.
 ## Exercise 5
 ![[Pasted image 20230304172951.png]]
-
+![[Pasted image 20230310144832.png]]
 ## Exercise 6
 ![[Pasted image 20230304173003.png]]
+![[Pasted image 20230310144919.png]]
+# Week 6
+## Exercise 1
+![[Pasted image 20230310145012.png]]
+## Exercise 2
+![[Pasted image 20230310145028.png]]
+## Exercise 3
+![[Pasted image 20230310145044.png]]
+## Exercise 4
+![[Pasted image 20230310145058.png]]
+## Exericse 5
+![[Pasted image 20230310145117.png]]
+## Exercise 6
+![[Pasted image 20230310145130.png]]
