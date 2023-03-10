@@ -48,9 +48,20 @@ See solution pdf.
 ![[Pasted image 20230310144919.png]]
 # Week 6
 ## Exercise 1
+
 ![[Pasted image 20230310145012.png]]
+![[Pasted image 20230310150000.png]]
+Events included in $H = <e_{1},e_2,e_3,e_5>$ 
+State components noted: $p_{1}= 25, p_{2}=175,p_{3}=35$ 
+Global state recorded:
+$H = <e_{1},e_2,e_3,e_5|e_{4},e_{6}>$  
 ## Exercise 2
 ![[Pasted image 20230310145028.png]]
+![[Pasted image 20230310150910.png]]
+Events included in $H = <e_{1},e_3,e_2>$ 
+State components noted: $p_{1}= 125, p_{2}=25,p_{3}=70, c_{21}=25$  
+Global state recorded:
+$H = <e_{1},e_2,e_3|e_{4},e_{5}>$  
 ## Exercise 3
 ![[Pasted image 20230310145044.png]]
 ## Exercise 4

@@ -15,7 +15,7 @@
 	* Channels deliver transmitted msgs after unknown but finite delay
 	* Furthermore, we consider only communicating events
 * A consistent global state is defined by:
-	* A state after a certain amount of events happend (H)
+	* A state after a certain amount of events happened (H)
 	* GS(H) = The state of each process p<sub>i</sub> after p<sub>i</sub> ’s last event in H for each channel, the sequence of msgs sent in H but not received  in H
 	* Also known as a **"CUT"** 
 * How to construct H?
