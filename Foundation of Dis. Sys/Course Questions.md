@@ -461,3 +461,38 @@
 	1) When a process p<sub>i</sub> sends a msg to a process p<sub>j</sub> it piggybacks only those entries of its vector clock that differ since the last message sent to p<sub>j</sub>
 21) How to cut down the storage overhead in S-K technique?
 	1) Add to additional vectors that keep track of Last updated and Last sent, such that only the necessary clock values are updated during a transmission
+
+
+### Week 6
+1) What is a global state?  
+2) How can we describe the global state of a distributed system?  
+3) What are the components of an event?  
+4) When is an event possible?  
+5) What is a possible computation?  
+6) Which assumptions do we rely on for distributed snapshot algorithms?  
+7) What is a consistent cut?  
+8) What is the difference between a consistent global picture and consistent global state?  
+9) What is a marker?  
+10) Describe Chandy and Lamport's algorithm  
+11) When does Chandy and Lamport's algorithm terminate?  
+12) What is the complexity of this algorithm (in messages)?  
+13) What is the time complexity of this algorithm?  
+14) Give two policies for turning local snapshots into a global snapshot  
+15) Does Chandy and Lamport's algorithm guarantee a global snapshot of a state that occured  during the system's execution? Why (not)?  
+16) Describe the difference between pre- and post-recording events.  
+17) What is a stable property?  
+18) What is a stable predicate?  
+19) What is a consistent run?  
+20) What is the relationship between a consistent run and consistent global states?  
+21) What is a non-stable predicate?  
+22) How can we evaluate non-stable predicates?  
+23) What is an observation?  
+24) Name some differences between observations and runs  
+25) How can we know if a non-stable predicate possibly occurred?  
+26) How can we know if a non-stable predicate definitely occurred?  
+27) What are issues faced in recording a global state?  
+28) Describe the main assumptions needed with regards to consistent global states?  
+29) Does the Chandy-Lamport global snapshot algorithm works correctly for non-FIFO  channels?  
+30) Can a distributed system have a unique global state at all times? Why (not)?  
+31) What is the difference between a consistent cut and a consistent global state?
+ 
