@@ -62,6 +62,7 @@
 		* Timestamp = (clock value, id of the process)
 * A total ordering => requires the further rule:
 	* CR4: a (in p<sub>i</sub>) => b (in p<sub>i</sub>) if and only if either L<sub>i</sub>(a) < L<sub>j</sub> (b) or L<sub>i</sub>(a) = L<sub>j</sub>(b) ∧ p<sub>i</sub> ≺ p<sub>j</sub> 
+* Weakness is the FIFO channels
 
 * Ricart and Agrawala's idea
 	* Does not require communication channels to be FIFO
@@ -69,4 +70,30 @@
 		* processes that require entry to a CS multicast a request message  
 		* processes can enter the CS only when all the other processes have replied to this message  
 		* node p<sub>j</sub> does not need to send a REPLY to node p<sub>i</sub> if p<sub>j</sub> has a request with  timestamp lower than the request of pi (since pi cannot enter before p<sub>j</sub> anyway in this case)
-	* 
+	* Weakness is the requirement of participation from all processes
+
+### Quorum-Based ME Algorithms
+* Each process requests permission to execute the CS from a subset of processes (Quorum)
+* The quorums are formed in such a way that when two processes concurrently request access to the CS
+	* at least one process receives both the requests
+	* this process is responsible to make sure that only one request executes the CS at any time
+
+* How does a quorum based algorithm work in distributed systems?
+	A quorum-based algorithm is a technique used in distributed systems to ensure that a certain number of nodes agree on a decision or operation. In this algorithm, a quorum refers to a subset of nodes that must participate in the decision-making process for it to be considered valid. 
+	
+	The algorithm works by requiring a majority of nodes in the quorum to agree on an action before it is executed. For example, if there are five nodes in the system and the quorum size is three, then any action must be approved by at least three nodes before it can be executed. 
+	
+	This approach helps to prevent split-brain situations where different parts of the system make different decisions based on incomplete information, which can lead to inconsistent results or data corruption. By ensuring that a quorum agrees on each decision, the system can maintain consistency and avoid conflicts.
+	
+	In summary, quorum-based algorithms are designed to provide fault tolerance and consistency in distributed systems by requiring agreement among a subset of nodes before executing any actions or making decisions.
+	
+* How does Maekawa's algorithm work?
+	Maekawa's algorithm is a distributed mutual exclusion algorithm used in computer systems. It works by dividing the system into a set of disjoint subsets, called quorums, and ensuring that any two quorums have at least one common process. 
+	
+	When a process wants to enter its critical section, it sends a request to all the processes in one of the quorums it belongs to. The other processes respond with their permission to allow the requesting process to enter the critical section. If all the processes respond positively, then the requesting process can enter its critical section. 
+	
+	However, if another process has already entered its critical section, then it will not grant permission and instead will defer its response until it exits its own critical section. This ensures that only one process can enter its critical section at a time.
+	
+	Overall, Maekawa's algorithm provides a decentralized way of achieving mutual exclusion in distributed systems without requiring centralized coordination or communication. 
+
+* By default none of these algorithms can handle unreliable channels.
