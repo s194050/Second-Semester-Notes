@@ -62,7 +62,7 @@ Events included in $H = <e_{1},e_3,e_2>$
 State components noted: $p_{1}= 125, p_{2}=25,p_{3}=70, c_{21}=25$  
 Global state recorded:
 $H = <e_{1},e_2,e_3|e_{4},e_{5}>$  
-## Exercise 3
+## Exercise 3 123
 ![[Pasted image 20230310145044.png]]
 ## Exercise 4
 ![[Pasted image 20230310145058.png]]
