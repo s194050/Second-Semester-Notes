@@ -394,3 +394,105 @@
 35. How large is the node state and the communication overhead when using a DHT?
 	1. Node state: $O(\log(N))$ 
 	2. Communication overhead: $O(\log(N))$ 
+
+### Week 5
+1) What is the causality relation?  
+	1) Causality is linked to temporal ordering
+	* if e<sub>i</sub> causes e<sub>j</sub>, then e<sub>i</sub> must happen before e<sub>j</sub>
+2) Why might two (remote) processes capturing the same event sequence break the causality relation?  
+	1) Because you would be unable to know which happened before, and as such there can be no ordering
+3) What is logical time? 
+	1)  Every process has a logical clock that is advanced with a set of rules. Every event is assigned a timestamp, which obey the fundamental monotonicity property. This ensures that there is casuality between events.
+4) Define and explain Lamport's happened-before relation. 
+	1) Lamport's notation of causal ordering
+		* HB1: if If ∃ process pi : e ➝ i e’, then e ➝ e'
+		* HB2: For any message m, send(m) ➝ receive(m)
+		* HB3: If e, e’, e’’ are events such that e ➝ e’ and e’ ➝ e’’ then e ➝ e’’
+	* Lamport's notation helps ensure causality as it is a way of ordering events.
+
+5) In what sense concurrency is different than parallelism?
+	1) Concurrent events, are events sharing data and as such execution order changes output/input, where as parallelism is events that have no shared data and as such the order does not matter.
+	2) In what sense concurrency is different than parallelism?
+		1) Concurrency is the ability of a system to execute multiple tasks simultaneously, while parallelism is the ability of a system to execute multiple tasks at the same time. Concurrency and parallelism are both used to improve performance, but they are different. Concurrency is about dealing with and managing multiple tasks in a single processor, while parallelism is about running multiple processors simultaneously in order to increase performance.
+6) What does it mean when two events are concurrent? 
+	1) They are executed at about the same time, but the order is unknown until after execution.
+7) What is a logical clock? 
+	1) A monotonically increasing software counter, which associates a value in an ordered domain with each event in a system.
+8) State the clock consistency property of logical clocks.  
+	1) The clock consistency property states that if two events (e.g., message transmissions) are causally related (i.e., one event occurs before the other), then the logical clock values associated with the two events must be in the correct order (i.e., the logical clock value associated with the earlier event must be smaller than that of the later event).
+	2) 
+10) What are the rules that define a Lamport logical clock? 
+	1) Logical Clock rules:
+	* e -> e' => L(e) < L(e')
+	* CR1: If ∃ process p<sub>i</sub> such that e ➝<sub>i</sub> e’, then L<sub>i</sub> (e) < L<sub>i</sub> (e’)
+	* CR2: If a is the sending of a message by p<sub>i</sub> and b is the receipt of the same message by p<sub>j</sub> , then L<sub>i</sub>(a) < L<sub>j</sub>(b)
+	* CR3: If e, e’, e’’ are 3 events : L(e) < L(e’) and L(e’) < L(e’’) then L(e) < L(e’’)
+11) Name one significant problem of Lamport clocks.  
+	1) Lamport clocks describes global time by a single number, which is not enough and "hides" essential information
+	2) This results in possible missed causality, or wrong.
+12) What is a vector clock?  
+	1) Overcome the shortcomings of the Lamport clock
+	* Lamport: e -> f *then* L(e) < L(f) - Clock consistency
+	* Vector: e -> f *iff* V(e) < V(f) - Strong consistency
+		* A vector clock for a system of N processes, is an array of N integers.
+		* Each process p<sub>i</sub> keeps it own vector clock V<sub>i</sub> which it uses to timestamp local events
+13) What are the implementation rules of a vector clock?  
+	1) Implementation rules:
+	* VC1: Initially, V<sub>i</sub>[ j ] := 0, for i, j = 1, 2, ...., N
+	* VC2: Just before p<sub>i</sub> timestamps an event, it sets V<sub>i</sub>[ i ] := V<sub>i</sub>[ i ] + 1
+	* VC3: p<sub>i</sub> includes the value t = V<sub>i</sub> in every message that pi sends
+	* VC4: When p<sub>i</sub> receives a timestamp t in a message  
+		- p<sub>i</sub> sets V<sub>i</sub>[ j ] := max(V<sub>i</sub>[ j ], t[ j ]) for j = 1, 2, ...., N  
+		- applies VC2  
+		- timestamp the event receive(m)
+14) State the consistency property of vector clocks.  
+	1) $e \rightarrow f \iff V(e)< V(f)$ 
+15) Why vector clocks are necessary? 
+	1) They are needed to capture the correct causality of the events occuring.
+16) What are the key differences between Lamport clocks and vector clocks? 
+	1)  Instead of using a single clock, vector clocks uses a vector for each process and such the causality of each is captured correctly.
+17) Explain how ordering on a vector clock works.  
+	1) $V \leq V' \iff V[j] \leq V'[j]\; for \; j=1,2,...,N$ 
+18) Name the drawbacks of vector clocks  
+	1) They have a very large message overhead as it grows linearly with the number of processes in the system.
+19) What is Singhal-Kshemkalyani’s Differential Technique? 
+	1) An algorithm that implements efficient vector clocks.
+20) What kind of optimizations does the S-K technique introduce?  
+	1) When a process p<sub>i</sub> sends a msg to a process p<sub>j</sub> it piggybacks only those entries of its vector clock that differ since the last message sent to p<sub>j</sub>
+21) How to cut down the storage overhead in S-K technique?
+	1) Add to additional vectors that keep track of Last updated and Last sent, such that only the necessary clock values are updated during a transmission
+
+
+### Week 6
+1) What is a global state?  
+2) How can we describe the global state of a distributed system?  
+3) What are the components of an event?  
+4) When is an event possible?  
+5) What is a possible computation?  
+6) Which assumptions do we rely on for distributed snapshot algorithms?  
+7) What is a consistent cut?  
+8) What is the difference between a consistent global picture and consistent global state?  
+9) What is a marker?  
+10) Describe Chandy and Lamport's algorithm  
+11) When does Chandy and Lamport's algorithm terminate?  
+12) What is the complexity of this algorithm (in messages)?  
+13) What is the time complexity of this algorithm?  
+14) Give two policies for turning local snapshots into a global snapshot  
+15) Does Chandy and Lamport's algorithm guarantee a global snapshot of a state that occured  during the system's execution? Why (not)?  
+16) Describe the difference between pre- and post-recording events.  
+17) What is a stable property?  
+18) What is a stable predicate?  
+19) What is a consistent run?  
+20) What is the relationship between a consistent run and consistent global states?  
+21) What is a non-stable predicate?  
+22) How can we evaluate non-stable predicates?  
+23) What is an observation?  
+24) Name some differences between observations and runs  
+25) How can we know if a non-stable predicate possibly occurred?  
+26) How can we know if a non-stable predicate definitely occurred?  
+27) What are issues faced in recording a global state?  
+28) Describe the main assumptions needed with regards to consistent global states?  
+29) Does the Chandy-Lamport global snapshot algorithm works correctly for non-FIFO  channels?  
+30) Can a distributed system have a unique global state at all times? Why (not)?  
+31) What is the difference between a consistent cut and a consistent global state?
+ 
