@@ -64,4 +64,7 @@
 * To ensure that all NI's change to the correct config for a mode. 
 	* A packet is sent out to every NI by the master node, that they are supposed to swap at certain point in time
 * ![[Pasted image 20230328142625.png|400]]
-* 
+* There is always a trade-off, either its:
+	* hardware
+	* memory
+	* speed
