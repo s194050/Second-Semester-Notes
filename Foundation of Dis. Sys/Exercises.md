@@ -70,3 +70,26 @@ $H = <e_{1},e_2,e_3|e_{4},e_{5}>$
 ![[Pasted image 20230310145117.png]]
 ## Exercise 6
 ![[Pasted image 20230310145130.png]]
+
+# Week 8
+## Exercise 1
+
+## Exercise 2
+### P 2.1
+
+### P2.2
+1.  False. Total can be true without FIFO being true (Drawing)
+2.  False. FIFO can be true without Total being true (Drawing)
+3.  False. Total can be true, and if FIFO is not true, then causal cannot be true
+	1. As causal implies FIFO
+4. False. Causal can be true, and thus FIFO is true, but it does not mean that total is true
+5. False. FIFO can be true, without causal ordering, but the opposite cannot happen.
+	1. FIFO requires at least two multicast from the same process, otherwise you cannot order
+6. True.
+
+## Exercise 3
+
+## Exercise 4
+
+
+## Exercise 5
