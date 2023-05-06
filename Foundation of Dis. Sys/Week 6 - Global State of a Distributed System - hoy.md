@@ -5,7 +5,7 @@
 		* Can be described by a tuple:
 		* $S = <p_1,p_2,c_{12},c_{21}>$ 
 * Events:
-	* Each even is described by $e = <p,s,s',M,C>$  
+	* Each event is described by $e = <p,s,s',M,C>$  
 	* What is an event in relation to global states in a distributed system?
 		In a distributed system, an event refers to any change in the state of a node that affects the global state of the system. This can include changes in data, messages being sent or received, or other actions taken by the node. Events are important in distributed systems because they allow nodes to coordinate and synchronize their actions, ensuring that the global state of the system remains consistent across all nodes. By detecting and responding to events, nodes can adjust their behavior and ensure that all nodes are working together towards a common goal.
 
