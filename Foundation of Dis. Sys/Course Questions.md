@@ -1,4 +1,4 @@
-### Week 1
+### Week 1 - Intro
 1. What is an architectural model of a distributed system?  
 		A way of modelling a distributed system. This model focuses on placement of the components and the relation between the different components.
 		An example is a P2P system.
@@ -46,7 +46,7 @@
 	  Means to hide the complexity of the system, such that it is perceived as a whole.
 	  Aim: to make certain aspects of distribution invisible to the application  programmer so that they need only be concerned with the design of their  particular application
 
-### Week 2
+### Week 2 - Protocols
 1. Describe a simple ACK/NACK Protocol and the corresponding error control mechanism.  
 	The sender sends a message to the reciever. If the message is recieved it responds with an ACK - otherwise if the message is corrupted in sends a NACK. This is the error control as it ensures that a corrupted message is resent.
 
@@ -111,7 +111,7 @@
 18.  What is a deadlock of the sender (because no ack message) error?
 	1. A sender is waiting for the response by the recipient, which will never arrive. Thus a deadlock.
 
-### Week 3
+### Week 3 - RMI
 1.  What are communication paradigms in distributed systems?  
 	1. How do entities communicate, and specifically which communication paradigms do they use.
 2.  What is the difference between direct and indirect communication?  
@@ -193,7 +193,7 @@
 	1. A public-subscribe system, also known as a pub/sub system, is a messaging system that allows users to subscribe to specific topics in order to receive messages from publishers. Publishers send these messages to a message broker, which then delivers the messages to all subscribers who have subscribed to the topic that the publisher is sending. This type of messaging system is often used by applications that require real-time data and notifications.
 
 
-### Week 4
+### Week 4 - P2P
 1. What is a Peer-to-Peer (P2P) system?  
 	1. A P2P system is a distributed collection of peer nodes that act both as servers and clients.
 
@@ -395,7 +395,7 @@
 	1. Node state: $O(\log(N))$ 
 	2. Communication overhead: $O(\log(N))$ 
 
-### Week 5
+### Week 5 - Logical Time
 1) What is the causality relation?  
 	1) Causality is linked to temporal ordering
 	* if e<sub>i</sub> causes e<sub>j</sub>, then e<sub>i</sub> must happen before e<sub>j</sub>
@@ -463,7 +463,7 @@
 	1) Add to additional vectors that keep track of Last updated and Last sent, such that only the necessary clock values are updated during a transmission
 
 
-### Week 6
+### Week 6 - Global States
 1) What is a global state?  
 2) How can we describe the global state of a distributed system?  
 3) What are the components of an event?  
@@ -495,4 +495,149 @@
 29) Does the Chandy-Lamport global snapshot algorithm works correctly for non-FIFO  channels?  
 30) Can a distributed system have a unique global state at all times? Why (not)?  
 31) What is the difference between a consistent cut and a consistent global state?
- 
+
+
+### Week 7 - mutex
+1) What are the two failure assumptions we typically make when discussing mutual exclusion?
+2) Why is mutual exclusion necessary in a distributed system that needs coordinated behavior?
+3) What makes mutual exclusion a more di cult problem in distributed systems than in the operating systems domain?
+4) Describe the distributed systems mutual exclusion model
+5) What are the three properties of a mutual exclusion algorithm? Describe each of these.
+6) Which one of these properties is absolutely required?
+7) What is a deadlock?
+8) What is starvation?
+9) What are some performance criteria for mutual exclusion algorithms?
+10) Name the three basic approaches for mutual exclusion in distributed systems.
+11) Describe the token-based approach
+12) Describe the Central Server algorithm. Which properties does it satisfy?
+13) What happens in the Central Server algorithm when a message gets lost or a process crashes?
+14) What is one weakness of the Central Server Algorithm?
+15) Describe the Ring-based algorithm. Which properties does it satisfy?
+16) What happens in the Ring-based algorithm when a message gets lost or a process crashes?
+17) What is one weakness of the Ring-based algorithm?
+18) Describe Lamport's algorithm. Which properties does it satisfy?
+19) What is one weakness of Lamport's algorithm?
+20) Describe Ricart and Agrawala's algorithm. Which properties does it satisfy?
+21) What is one weakness of Ricart and Agrawala's algorithm?
+22) Can we make Ricart and Agrawala's algorithm crash fault-tolerant?
+23) What is a quorum-based approach?
+24) Describe Ricart and Agrawala's algorithm. Which properties does it satisfy?
+25) What is a Quorum?
+26) Explain the concepts behind quorum-based mutual exclusion algorithms.
+27) What is the intersection property and why is it necessary?
+28) Which conditions do quorums in Maekawa's algorithm satisfy?
+29) Is Maekawa's algorithm crash fault-tolerant?
+
+### Week 8 - multicast
+1) What is the difference between sending one message, multicast, and broadcast?
+2) What is the difference between an open and a closed group, w.r.t. multi-casting?
+3) Which properties should a reliable 1-to-1 channel satisfy?
+4) Describe the system model we use for multicast communication
+5) What extra elements do we add to messages?
+6) What are the differences (in properties) between a basic reliable multi-cast channel and a reliable 1-to-1 channel?
+7) What does it mean when we say a basic multicast algorithm is correct?
+8) What is the ack-implosion problem?
+9) What extra elements do we add to messages?
+10) Describe the specification differences between basic multicast and reli-able multicast.
+11) How does R-multicast work?
+12) What sort of failure scenarios does R-multicast help against?
+13) What is the atomicity property?
+14) Is the R-multicast algorithm efficient?
+15) Name three common ordering requirements for messages
+16) What kind of components are useful for implementing FIFO ordering?
+17) Which assumptions do we make to make our ordering algorithms work?
+18) What kind of components are useful for implementing causal ordering?
+19) Which question are we trying to solve when implementing total ordering? Name two possible approaches to this problem.
+20) What is the difference between the liveness criteria for sender and sys-tem?
+21) Explain each property of a correct basic multicast.
+22) Which properties are ’safety’ properties of a correct basic multicast?
+23) Which properties are ’liveness’ properties of a correct basic multicast?
+### Week 9 - Elections and consensus
+1) What is an election algorithm?
+2) What are process roles and election calls in distributed elections?
+3) What is an important requirement for the choice of elected process?
+4) What are the requirements during any particular run of the election algorithm?
+5) What is the performance of an election algorithm (network bandwidth and turnaround time)?
+6) What are the goals and properties of a ring-based election algorithm?
+7) Describe election in a ring-based election algorithm.
+8) Describe notification in a ring-based election algorithm.
+9) What is the performance of a ring-based election algorithm?
+10) What are the limitations of the ring-based algorithm?
+11) What is a failure detector?
+12) What are the categories of failure detectors?
+13) What is an unreliable failure detector?
+14) What is a reliable failure detector?
+15) What are the goals and properties of the bully algorithm?
+16) What are the types of messages in the bully algorithm?
+17) Describe the bully algorithm.
+18) What is the performance of the bully algorithm?
+19) Describe the system model of consensus.
+20) Explain the definition of the consensus problem.
+21) What are the requirements of a consensus algorithm?
+22) Describes an algorithm to solve consensus in a synchronous system.
+23) What is the Byzantine generals problem?
+24) What is the difference of the Byzantine generals problem from consensus?
+25) What are the requirements for the Byzantine generals problem?
+26) What is the interactive consistency problem?
+27) What are the requirements for interactive consistency?
+28) How to construct a solution to the Interactive Consistency problem from the Byzantine Generals problem?
+29) How to construct a solution to the Consensus problem from the Interactive Consistency problem?
+30) Briefly describe how to prove safety and liveness in a ring-based election algorithm.
+31) What are adaptive timeouts and what bene t do they have?
+32) What requirement does a system need to use reliable failure detectors?
+33) Briefly describe how the consensus problem can be solved in the absence of failures.
+34) Briefly describe how the consensus problem can be solved in the presence of crash failures.
+35) Give a lower bound on the number of rounds required to reach a consensus in the presence of failures.
+36) Relate the number of processes and failures to describe impossibility of the Byzantine Generals problem in a synchronous system.
+37) Describe consensus impossibility in asynchronous systems.
+
+### Week 10 - Cyber security
+
+### Week 11 - Remote Attestation
+1) Can you name 3 reasons why IoT devices are prone to many cyberattacks?
+2) What is Remote Attestation?
+3) What are the main categories of Remote Attestation approaches?
+4) What are the advantanges and disadvantages of software-based Remote Attestation protocols?
+5) What is the difference between software-based and hybrid Remote Attestation protocols?
+6) Describe execution of a hybrid Remote Attestation protocol.
+7) What is the goal of swarm attestation?
+8) Describe SEDA protocol (swarm attestation).
+9) What is the goal of dynamic attestation protocols?
+10) Describe C-FLAT protocol (dynamic attestation).
+11) What is the main advantage of Distributed Services attestation?
+12) Describe SARA protocol (Attestation of asynchronous distributed IoT services).
+13) What are the potential implications of not implementing remote attestation in critical infrastructure IoT devices?
+14) Can remote attestation be used to ensure the integrity of data transmitted by IoT devices?
+15) How can remote attestation be used to verify the identity of IoT devices and prevent spoofing attacks?
+16) What are the key components of a hardware-based remote attestation system for IoT devices?
+17) How can fog computing facilitate the implementation of remote attestation in large networks?
+### Week 12 - Blockchain
+1) What is the first blockchain based cryptocurrency?
+2) Which 3 building block make up blockchain technology?
+3) Describe the idea behind hash functions and cryptographic hash functions.
+4) Name at least 2 security properties of a cryptographic hash function
+5) What do we mean with collision resistance?
+6) What do we mean with preimage resistance?
+7) What do we mean with second preimage resistance?
+8) What are hashes used for?
+9) What is a hash pointer?
+10) What is a blockchain?
+11) What is the key property of tamper-evident log structures?
+12) What is a digital signature?
+13) What are the two key properties of digital signatures?
+14) Explain what a bitcoin address is, in terms of standard cryptographic techniques.
+15) Explain the basic idea behind spending coins in a typical cryptocurrency
+16) What is double-spending?
+17) How do blockchain technologies try to prevent double psending?
+18) Name some aspects of decentralization
+19) What is a distributed consensus protocol?
+20) What do nodes in a cryptocurrency have to reach consensus on?
+21) Describe the basic idea behind the bitcoin consensus algorithm (simplified).
+22) Describe the steps that happen (in rough lines) when a Bitcoin transaction is made.
+23) Is double spending technically possible in Bitcoin? Why (not)?
+24) How does Bitcoin prevent branching out into multiple chains?
+25) Name some distributed consensus models.
+26) Name some differences between permissionless and permissioned blockchains
+27) What is a 51% attack?
+28) Is a 51% attack technically possible in Bitcoin? Why (not)?
+29) Name some advantages and disadvantages of blockchain technology.
