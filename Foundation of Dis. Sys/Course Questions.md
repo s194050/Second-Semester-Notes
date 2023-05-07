@@ -871,6 +871,67 @@
 	3) This impossibility is circumvented by masking faults or using failure detectors
 
 ### Week 10 - Cyber security
+1) How do you define the security of a system?  
+	1)  Preserving the C.I.A
+	* Confidentiality
+	* Integrity
+	* Availability
+2) What is Confidentiality?  
+	1) The avoidance of the unauthorized disclosure of information
+3) What is Integrity?  
+	1) The property that information has not be altered in an unauthorized way
+4) What is Availability?  
+	1) The property that information and systems are accessible and usable in a timely fashion by those authorized to do so
+5) Can you name some tools for Confidentiality?  
+	1) Encryption, access control, Authentication, physical security
+6) What is Access Control?  
+	1) Rules and policies that limit access to con dential information to those people and/or systems with a “need to know”
+7) What is Authentication?  
+	1) The determination of the identity that someone has
+		1) Can be done by something the person has, knows or is
+8) What is Physical Security?  
+	1) The establishment of physical barriers to limit access to protected computational resources
+9) Can you name some tools for Integrity?  
+	1) Backups, checksums, data correcting codes
+10) Can you name some tools for Availability?  
+	1) Physical protection, countermeasures against system overload, countermeasures against system crashing
+11) What is Assurance?  
+	1) Refers to how trust is provided and managed
+12) Can you name some tools for Assurance?  
+	1) Tools: Policies, Permissions, Protections
+13) What is Authenticity?  
+	1)  The ability to determine that statements, policies and permissions issued by persons or systems are genuine/authentic
+		* Can be seen as authentication + integrity
+14) What is Anonymity?  
+	1) The property that certain records or transactions not to be attributable to any individual
+15) Can you describe some examples of attacks?  
+	1) Eavesdropping, Man in the middle, Denial of service, repudiation
+16) What are Encryption and Decryption?  
+	1)  Encryption is by encrypting a message, that makes it unreadable by anyone without the correct key.
+	2) Decryption is using the correct key to read an encrypted message
+17) What are Cryptographic Hash Functions?  
+	1) Encryption of data, that by used for validating if a message is correct
+18) Describe what is a digital signature and which properties satisfy.  
+	1)  Digital signature, is a way of authenticate who the message is from, based on some public key.
+	2)  Authentication and Integrity
+19) What is a Public Key Infrastructure (PKI)?  
+	1) A public key infrastructure (PKI) provides all the components necessary for different types of users and entities to be able to communicate securely and in a predictable manner
+20) What is the difference between a Registration Authority (RA) and Certificate Authority (CA)?  
+	1) RA:
+		1) A registration authority (RA) is the PKI component that accepts a request for a digital certificate and performs the necessary steps of registering and authenticating the person requesting the certificate
+	2) CA:
+		1) A certificate authority (CA) is trusted authority that certificates individuals’ identities and creates electronic documents (digital certificate) indicating that individuals are who they say they are
+21) What is a digital certificate?  
+	1) A digital certificate establishes an association between the subject’s identity and a public key
+	2) A digital certificate binds an entity’s identity to a public key
+22) What are the steps for Obtaining a Digital Certificate?  
+	1) ![[Pasted image 20230507135812.png]]
+23) What is a simple classification of Authentication Protocols?  
+	1)  Classified based on the cryptographic technique used:
+		1) Symmetric cryptography uses a single private key to both encrypt and decrypt data
+		2)  Asymmetric cryptography (a.k.a public-key cryptography) uses a secret key (private key) and a public key
+24) Describe a basic authentication protocol.
+	1) ![[Pasted image 20230507135923.png]]
 ### Week 11 - Remote Attestation
 1) Can you name 3 reasons why IoT devices are prone to many cyberattacks?
 	1)  Easy to exploit
